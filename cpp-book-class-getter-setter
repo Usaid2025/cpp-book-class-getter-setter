@@ -1,0 +1,62 @@
+#include<iostream>
+using namespace std;
+class book
+{
+  private:
+  string Title;
+  string author;
+  int price;
+  public:
+  void setPrice(int p)
+  {
+      if(p>0)
+      price=p;
+  else
+  cout<<"Invalid Price"<<endl;
+  }
+  int getPrice()
+  {
+      return price;
+  }
+  void setTitle(string t)
+  {
+       Title=t;
+  }
+  string getTitle()
+  {
+      return Title;
+  }
+    void setAuthor(string a)
+{
+     author=a;
+}
+string getAuthor()
+{
+    return author;
+}
+   
+};
+int main()
+{
+    string t,a;
+    int p;
+    cout<<"Enter title"<<endl;
+    getline(cin,t);
+    cout<<"Enter Author Name"<<endl;
+    getline(cin,a);
+    cout<<"Enter Price"<<endl;
+    cin>>p;
+    book b;
+    b.setTitle(t);
+    b.setAuthor(a);
+    b.setPrice(p);
+    
+    cout<<"title "<<b.getTitle()<<endl;
+    cout<<"Author "<<b.getAuthor()<<endl;
+    cout<<"Price "<<b.getPrice()<<endl;
+    
+    
+    
+    
+    return 0;
+}
